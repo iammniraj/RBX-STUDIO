@@ -25,42 +25,44 @@ body {
     display: block;
     background-image: linear-gradient(to right, rgba(140, 14, 14, 0.982) 60%, #000);
     color: transparent;
-    font-size: 4rem;
-    font-weight: 900;
-    letter-spacing: 0.2rem;
-    -webkit-background-clip: text;
-    background-clip: text;
-    transition: all 0.3s;
-    animation: movetoright 0.3s ease-in;
-    width: 100%; }
-  .heading-primary--main2 {
-    display: block;
-    background-image: linear-gradient(to right, rgba(140, 14, 14, 0.982) 60%, #000);
-    color: transparent;
     font-size: 4.5rem;
     font-weight: 900;
     letter-spacing: 0.2rem;
     -webkit-background-clip: text;
     background-clip: text;
-    animation: movetoLeft 1s ease-in; }
+    animation: animate__flash 5s infinite;
+    width: 100%; }
   .heading-primary--sub {
     display: block;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
-    letter-spacing: 1rem; }
+    letter-spacing: 1rem;
+    color: #101110;
+    animation: animate__fadeIn 2s infinite;
+    text-shadow: 0 2rem 2rem transparent; }
   .heading-primary--desc {
-    font-size: 2rem; }
+    font-size: 2rem;
+    margin-top: -3rem; }
 
 .heading-secondary {
   background-image: linear-gradient(to right, #ffb900, #ff7730);
   display: inline-block;
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 4rem;
   text-transform: uppercase;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  text-shadow: 0 2rem 2rem #4e2f24; }
+
+.fade--sub1 {
+  position: absolute;
+  left: 40%;
+  top: 35%; }
+
+.sub3 {
+  animation: animate__fadeIn 10s 5s infinite; }
 
 @keyframes movetoright {
   0% {
@@ -83,23 +85,37 @@ body {
     transform: translateX(0); } }
 
 .intro__head {
-  color: black;
-  text-shadow: -1px 2px 5px white;
-  word-spacing: 20px;
-  font-family: "Oleo Script Swash Caps", cursive; }
+  text-transform: uppercase;
+  color: #e9dfd7;
+  background-image: linear-gradient(to right, #c5c5c5 0%, #e9dfd7 50%, #d7e9df);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin: 4rem auto;
+  text-shadow: 0 2rem 2rem black;
+  line-height: 4.3rem; }
   .intro__head-des {
     display: block;
     font-size: 4rem; }
 
+@keyframes revealLine {
+  0% {
+    opacity: 0;
+    transform: translate(); } }
+
 .container-image {
   height: 100px;
   width: 100px;
-  margin: 2rem auto 1rem auto; }
+  margin: 2rem auto 1rem auto;
+  transition: all 0.2s; }
 
 .container-heading {
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  color: black;
+  background-image: linear-gradient(to right, #ffb900, #ff7730);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
   font-weight: 700;
   margin-bottom: 2rem; }
 
@@ -112,14 +128,44 @@ body {
   height: 500px;
   width: auto;
   box-shadow: 0 2rem 2rem rgba(105, 160, 57, 0.412), -2rem -2rem 2rem rgba(115, 110, 110, 0.492);
-  text-align: center; }
+  text-align: center;
+  position: relative; }
 
 .card-image {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  z-index: 10; }
+  .card-image:hover {
+    transform: scale(1.05) translateY(-0.5rem);
+    outline: 2px solid rgba(0, 0, 0, 0.5);
+    z-index: 20; }
+  .card-image:hover ~ .card-image-image:not(:hover) {
+    transform: scale(0.9); }
+
+.featuree__box {
+  height: 70%;
+  width: 80%;
+  background-color: black;
+  position: absolute;
+  top: -63px;
+  margin: 0 10%;
+  transform: skewY(-2); }
+
+.footer-bg {
+  padding: 10rem 4rem;
+  background-image: linear-gradient(to right, #070b5fab 0%, #5f070c 50%, #5f5a07); }
+
+h5 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: white; }
+
+li {
+  font-size: 2rem;
+  color: black; }
 
 .row {
-  width: 170rem;
+  width: 100%;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 1rem; }
@@ -270,20 +316,30 @@ body {
   top: 0; }
 
 .intro {
-  height: 73vh;
-  background-image: linear-gradient(to bottom left, #463333, #614a4ad0);
-  margin-top: -15rem;
+  height: 60vh;
+  background-image: linear-gradient(to right, #070b5fab 0%, #5f070c 50%, #5f5a07);
+  margin-top: -17rem;
   text-align: center;
   padding: 15rem 10rem; }
 
 .services {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   text-align: center;
   transform: skewY(-4deg);
   background-color: white;
   margin-top: -5rem;
   backface-visibility: hidden;
-  padding-top: 10rem; }
+  padding-top: 10rem;
+  margin-bottom: 1px; }
   .services > * {
     transform: skewY(4deg); }
+
+.featuree {
+  height: 150vh;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  backface-visibility: hidden;
+  background-color: gray;
+  position: relative; }

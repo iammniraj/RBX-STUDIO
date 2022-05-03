@@ -1,13 +1,25 @@
 .intro__head {
-  //   text-transform: uppercase;
-  color: rgb(0, 0, 0);
-  text-shadow: -1px 2px 5px white;
-
-  word-spacing: 20px;
-  font-family: "Oleo Script Swash Caps", cursive;
+  text-transform: uppercase;
+  color: #e9dfd7;
+  background-image: linear-gradient(to right, #c5c5c5 0%, #e9dfd7 50%, #d7e9df);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin: 4rem auto;
+  text-shadow: 0 2rem 2rem black;
+  line-height: 4.3rem;
 
   &-des {
     display: block;
     font-size: 4rem;
+  }
+}
+.intro-center {
+}
+
+@keyframes revealLine {
+  0% {
+    opacity: 0;
+    transform: translate();
   }
 }

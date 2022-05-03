@@ -1,12 +1,17 @@
 .intro {
-  height: 73vh;
-  background-image: linear-gradient(to bottom left, #463333, #614a4ad0);
-  margin-top: -15rem;
+  height: 60vh;
+  background-image: linear-gradient(
+    to right,
+    #070b5fab 0%,
+    #5f070c 50%,
+    #5f5a07
+  );
+  margin-top: -17rem;
   text-align: center;
   padding: 15rem 10rem;
 }
 .services {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   text-align: center;
   transform: skewY(-4deg);
@@ -14,8 +19,19 @@
   margin-top: -5rem;
   backface-visibility: hidden;
   padding-top: 10rem;
+  margin-bottom: 1px;
 
   & > * {
     transform: skewY(4deg);
   }
+}
+
+.featuree {
+  height: 150vh;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  backface-visibility: hidden;
+  background-color: gray;
+  position: relative;
 }
