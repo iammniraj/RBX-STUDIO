@@ -1,6 +1,31 @@
 .container {
   &-image {
-    height: 20px;
-    width: 20px;
+    height: 100px;
+    width: 100px;
+    margin: 2rem auto 1rem auto;
   }
+  &-heading {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  &-details {
+    font-size: 2rem;
+    max-width: 80%;
+    padding-left: 3rem;
+  }
+  &__card {
+    height: 500px;
+    width: auto;
+    box-shadow: 0 2rem 2rem rgba(105, 160, 57, 0.412),
+      -2rem -2rem 2rem rgba(115, 110, 110, 0.492);
+    text-align: center;
+  }
+}
+
+.card-image {
+  height: 100%;
+  width: 100%;
 }

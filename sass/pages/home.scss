@@ -1,13 +1,21 @@
 .intro {
-  height: 60vh;
-  background-image: linear-gradient(to bottom left, #dbdbdb, #dbd7d7d0);
-  margin-top: -17rem;
+  height: 73vh;
+  background-image: linear-gradient(to bottom left, #463333, #614a4ad0);
+  margin-top: -15rem;
   text-align: center;
-  clip-path: polygon(0% 14%, 100% 0%, 100% 90%, 0% 99%);
-  z-index: 100;
+  padding: 15rem 10rem;
 }
 .services {
   height: 100vh;
   width: 100%;
   text-align: center;
+  transform: skewY(-4deg);
+  background-color: white;
+  margin-top: -5rem;
+  backface-visibility: hidden;
+  padding-top: 10rem;
+
+  & > * {
+    transform: skewY(4deg);
+  }
 }

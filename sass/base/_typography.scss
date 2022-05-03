@@ -22,7 +22,8 @@ body {
     letter-spacing: 0.2rem;
     -webkit-background-clip: text;
     background-clip: text;
-    animation: movetoright 1s ease-in;
+    transition: all 0.3s;
+    animation: movetoright 0.3s ease-in;
     width: 100%;
   }
   &--main2 {
@@ -62,5 +63,7 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
+  margin-bottom: 4rem;
 }
