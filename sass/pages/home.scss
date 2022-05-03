@@ -1,0 +1,13 @@
+.intro {
+  height: 60vh;
+  background-image: linear-gradient(to bottom left, #dbdbdb, #dbd7d7d0);
+  margin-top: -17rem;
+  text-align: center;
+  clip-path: polygon(0% 14%, 100% 0%, 100% 90%, 0% 99%);
+  z-index: 100;
+}
+.services {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
